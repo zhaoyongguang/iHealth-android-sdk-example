@@ -39,7 +39,7 @@ dependencies {
     //fastJson
     implementation 'com.alibaba:fastjson:1.2.48'
     //动态权限获取
-    implementation 'com.github.tbruyelle:rxpermissions:0.12'
+//    implementation 'com.github.tbruyelle:rxpermissions:0.12'
 //    agentWeb
 //    implementation 'com.just.agentweb:agentweb:4.0.2' // (必选)
 //    implementation 'com.just.agentweb:download:4.0.2' // (可选)

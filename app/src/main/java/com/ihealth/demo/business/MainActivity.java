@@ -52,7 +52,7 @@ import com.ihealth.demo.business.device.PO3;
 import com.ihealth.demo.business.device.PT3SBT;
 import com.ihealth.demo.business.device.TS28B;
 import com.ihealth.demo.business.device.model.DeviceCharacteristic;
-import com.tbruyelle.rxpermissions3.RxPermissions;
+//import com.tbruyelle.rxpermissions3.RxPermissions;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -76,7 +76,7 @@ public class MainActivity extends BaseFragmentActivity {
     ImageView mImgStatus;
 
     private Context mContext;
-    private RxPermissions permissions;
+//    private RxPermissions permissions;
 
     //handler 中处理的四种状态
     public static final int HANDLER_SCAN = 101;
