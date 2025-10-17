@@ -23,7 +23,6 @@ import com.ihealth.demo.base.BaseFragmentActivity;
 import com.ihealth.demo.business.device.AM3;
 import com.ihealth.demo.business.device.AM3S;
 import com.ihealth.demo.business.device.AM4;
-import com.ihealth.demo.business.device.AM5;
 import com.ihealth.demo.business.device.AM6;
 import com.ihealth.demo.business.device.BG1;
 import com.ihealth.demo.business.device.BG1A;
@@ -37,8 +36,6 @@ import com.ihealth.demo.business.device.BP550BT;
 import com.ihealth.demo.business.device.BP5S;
 import com.ihealth.demo.business.device.BP7S;
 import com.ihealth.demo.business.device.BTM;
-import com.ihealth.demo.business.device.ECG3;
-import com.ihealth.demo.business.device.ECGUSB;
 import com.ihealth.demo.business.device.HS2;
 import com.ihealth.demo.business.device.HS2S;
 import com.ihealth.demo.business.device.HS2SPRO;
@@ -342,10 +339,6 @@ public class MainActivity extends BaseFragmentActivity {
                 intent.setClass(MainActivity.this, AM4.class);
                 break;
 
-            case iHealthDevicesManager.TYPE_AM5:
-                intent.setClass(MainActivity.this, AM5.class);
-                break;
-
             case iHealthDevicesManager.TYPE_AM6:
                 intent.setClass(MainActivity.this, AM6.class);
                 break;
@@ -364,14 +357,6 @@ public class MainActivity extends BaseFragmentActivity {
 
             case iHealthDevicesManager.TYPE_PO3:
                 intent.setClass(MainActivity.this, PO3.class);
-                break;
-
-            case iHealthDevicesManager.TYPE_ECG3:
-                intent.setClass(MainActivity.this, ECG3.class);
-                break;
-
-            case iHealthDevicesManager.TYPE_ECG3_USB:
-                intent.setClass(MainActivity.this, ECGUSB.class);
                 break;
 
             case iHealthDevicesManager.TYPE_PT3SBT:

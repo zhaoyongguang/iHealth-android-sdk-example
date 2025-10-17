@@ -80,7 +80,7 @@ public class CertificationFragment extends BaseFragment {
             //then put it in the assets folder and modify the corresponding name to call the following method
             //When ispass replays true, it indicates that the authentication has passed
             //refer to https://chenxuewei-ihealth.github.io/ihealthlabs-sdk-docs/docs/android/quickstart
-            InputStream is = mContext.getAssets().open("your authorization PEM file");
+            InputStream is = mContext.getAssets().open("com_android_demo_android.pem");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

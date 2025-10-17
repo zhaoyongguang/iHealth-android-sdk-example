@@ -223,16 +223,6 @@ public class ScanFragment extends BaseFragment {
                     device.setDeviceName(typeScan);
                     device.setRssi(rssi);
                     device.setDeviceMac(macScan);
-                    //ECG devices should deal with multiple USB connection duplicate display
-                    if (mDeviceName.equals("ECGUSB") || mDeviceName.equals("ECG3USB")) {
-                        for (int x = 0; x < list_ScanDevices.size(); x++) {
-                            if (list_ScanDevices.get(x).getDeviceMac().equals(device.getDeviceMac())) {
-                                list_ScanDevices.remove(x);
-                                mAdapter.notifyDataSetChanged();
-                                break;
-                            }
-                        }
-                    }
 
                     list_ScanDevices.add(device);
                     mAdapter.setList(list_ScanDevices);
@@ -325,9 +315,6 @@ public class ScanFragment extends BaseFragment {
 
         } else if (mDeviceName.equals("FDIR-V3")) {
             iHealthDevicesManager.getInstance().startDiscovery(getDiscoveryTypeEnum("FDIR_V3"));
-
-        } else if (mDeviceName.equals("ECGUSB")) {
-            iHealthDevicesManager.getInstance().startDiscovery(getDiscoveryTypeEnum("ECG3USB"));
 
         } else if (mDeviceName.contains("PO3")) {
             iHealthDevicesManager.getInstance().startDiscovery(getDiscoveryTypeEnum("PO3"));

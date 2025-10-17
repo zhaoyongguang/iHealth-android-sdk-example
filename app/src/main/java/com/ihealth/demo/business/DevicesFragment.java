@@ -202,10 +202,6 @@ public class DevicesFragment extends BaseFragment {
                 deviceName = iHealthDevicesManager.TYPE_AM4;
                 break;
 
-            case R.id.llAM5:
-                deviceName = iHealthDevicesManager.TYPE_AM5;
-                break;
-
             case R.id.llAM6:
                 deviceName = iHealthDevicesManager.TYPE_AM6;
                 break;
@@ -233,34 +229,7 @@ public class DevicesFragment extends BaseFragment {
             case R.id.ll_pt3sbt:
                 deviceName = "PT3SBT";
                 break;
-
-            case R.id.llECG3:
-                showECGDialog();
-                return;
         }
         mMainActivity.showScanFragment(deviceName, null);
-    }
-
-    public void showECGDialog() {
-        new IOSActionSheetDialog.Builder(mContext)
-                .setTitle(mContext.getString(R.string.dialog_title_connect_mode))
-                //.setSheetItemList(sheetItemList)//添加item集合
-                .addSheetItem(mContext.getString(R.string.function_item_button_connect_mode_ble), "FF0098EF")
-                .addSheetItem(mContext.getString(R.string.function_item_button_connect_mode_usb), "FF0098EF")
-                .setOnItemClickListener(new IOSActionSheetDialog.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(LinearLayout parent, View view, int position) {
-                        //do something
-                        if (position == 0) {
-                            mMainActivity.showScanFragment(iHealthDevicesManager.TYPE_ECG3, null);
-                        } else {
-                            mMainActivity.showScanFragment(iHealthDevicesManager.TYPE_ECG3_USB, null);
-                        }
-                    }
-                })
-//                .setTitleHeight(57)//可选项
-//                .setTitleSize(20)
-                .build()
-                .show();
     }
 }
